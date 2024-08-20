@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabrile Jones</title>
+    <title>Gabriel Jones</title>
     <style>
         body {
             margin: 0;
@@ -26,7 +26,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Distribuisce lo spazio tra header e footer */
+            justify-content: space-between;
         }
 
         .snap-header, .snap-footer {
@@ -39,12 +39,12 @@
         }
 
         .snap-header {
-            height: 60px; /* Altezza fissa per l'header */
+            height: 60px;
             position: relative;
         }
 
         .snap-footer {
-            height: 60px; /* Altezza fissa per il footer */
+            height: 60px;
             position: relative;
         }
 
@@ -86,7 +86,7 @@
         }
 
         .snap-content {
-            flex: 1; /* Occupa lo spazio rimanente tra header e footer */
+            flex: 1;
             background-color: #f2f2f2;
             display: flex;
             flex-direction: column;
@@ -149,9 +149,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* background-image: url('unt.png'); */
-            /* background-size: cover; */
-            /* background-position: center; */
             border-radius: 15px;
             z-index: 0;
             opacity: 0.3;
@@ -187,8 +184,7 @@
         /* Stile per l'iframe */
         .iframe-container {
             width: 100%;
-            height: 300px; /* Altezza dell'iframe */
-            margin-top: 20px;
+            padding-top: 56.25%; /* Mantiene il rapporto di aspetto 16:9 */
             position: relative;
             border-radius: 15px;
             overflow: hidden;
@@ -196,6 +192,9 @@
         }
 
         .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             border: none;
@@ -220,7 +219,9 @@
             <div class="snap-element">
                 <div class="snap-title">Gabriel Jones</div>
                 <div class="snap-text">Non ho parole! Sono Gabriel Jones e questo è il mio mondo!.</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Xqs5-He1ZmM?si=bzZ_zS3XrRff9dRT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/Xqs5-He1ZmM?si=bzZ_zS3XrRff9dRT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="iframe-container">
                     <iframe src="img.html" title="Example"></iframe>
                 </div>
